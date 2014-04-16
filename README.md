@@ -16,7 +16,7 @@ it simply add the following line to your Podfile:
 
     pod "SevenDigital"
 
-2. Register as a developer to get a key and secret at http://access.7digital.com/partnerprogram
+2. Register as a developer to get a key and secret at https://api-signup.7digital.com
 
  Clone the repository, which includes a sample app
 
@@ -38,7 +38,7 @@ it simply add the following line to your Podfile:
 
 3. Add libxml2.dylib to your Link Binaries With Libraries Build Phase using the same process as in step 2
 
-4. Get your App Credentials at http://access.7digital.com/partnerprogram
+4. Get your App Credentials at https://api-signup.7digital.com
 
 5. In your Application Delegate:
 	1. Import SevenDigital: 
@@ -58,7 +58,7 @@ The 7digital API gives developers access to 7digital services and licensed catal
 
 Most of the 7digital API is open to everyone and free for non-commercial use (with usage limits in place). Commercial/business use of the API requires a contract with 7digital.
 
-Read more here: http://developer.7digital.com//resources/api-docs/introduction
+Read more here: http://developer.7digital.com/resources/api-docs/introduction
 
 
 ##About 7digital
