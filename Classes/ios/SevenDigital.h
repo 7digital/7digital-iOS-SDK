@@ -27,7 +27,7 @@
 /**
  Initializes the 7digital API with your consumer key and secret. 
  
- @see Register as a developer at http://access.7digital.com/partnerprogram for more information
+ @see Register as a developer at https://api-signup.7digital.com for more information
  @param key     Your 7digital Consumer Key
  @param secret  Your 7digital Consumer Secret
  
