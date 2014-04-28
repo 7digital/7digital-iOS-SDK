@@ -9,7 +9,7 @@ By integrating the SDK you can download and stream 7digital music within your ow
 The 7digital SDK requires iOS 7.0 or above, and the libxml2 library to run.
 
 
-##Getting Started
+## Getting Started
 
 1. SevenDigital is available through [CocoaPods](http://cocoapods.org), to install
 it simply add the following line to your Podfile:
@@ -52,8 +52,28 @@ it simply add the following line to your Podfile:
 		
 6. Many of the 7digital API methods require the user to be logged in. Create your own 7digital account at www.7digital.com
 
+## Making a generic request
 
-##About the 7digital API
+The example applications show how you can use some of the wrapper classes to query the locker API. For any other calls to the 7digital API, you can follow the following pattern:
+
+1. Create a request object
+	
+		SDAPIRequest *chartRequest = [[SDAPIRequest alloc] initWithPath:@"/release/chart" 
+		                                                              method:SDHTTPMethodGet 
+		                                                              params:@{@"country":@"GB"}];
+	
+2. Call the performRequest:onSuccess:onFailure method
+	
+		[[SevenDigital sharedInstance] performRequest:chartRequest onSuccess:^(SDAPIResponse *apiResponse) {
+		    NSDictionary *responseDictionary = apiResponse.responseItem;
+		    NSLog(@"successful call %@", responseDictionary);
+		} onFailure:^(NSError *error) {
+		    NSLog(@"failure %@", error);
+		}];
+	
+To find out more about the available calls and required parameters, you can find the documentation at http://developer.7digital.com/resources/api-docs/introduction
+
+## About the 7digital API
 The 7digital API gives developers access to 7digital services and licensed catalogue of over 25m tracks allowing creation of new music applications ranging from simple music discovery websites to fully integrated download stores or full-length streaming services.
 
 Most of the 7digital API is open to everyone and free for non-commercial use (with usage limits in place). Commercial/business use of the API requires a contract with 7digital.
@@ -61,7 +81,7 @@ Most of the 7digital API is open to everyone and free for non-commercial use (wi
 Read more here: http://developer.7digital.com/resources/api-docs/introduction
 
 
-##About 7digital
+## About 7digital
 7digital is the world’s leading open music platform, and provides open access to the broadest catalogue of fully licensed, high quality digital music. We power comprehensive digital music services for consumers, developers and a wide range of partners around the world. [More about 7digital](http://www.7digital.com/about)
 
 ## Support
