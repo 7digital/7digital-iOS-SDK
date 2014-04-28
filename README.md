@@ -38,7 +38,7 @@ it simply add the following line to your Podfile:
 
 3. Add libxml2.dylib to your Link Binaries With Libraries Build Phase using the same process as in step 2
 
-4. In your project's target Build Settings, add -ObjC to the [Other Linker Flags](images/readme_objc.png) 
+4. In your project's target Build Settings, add `-ObjC` to the [Other Linker Flags](images/readme_objc.png) 
 
 5. Get your App Credentials at https://api-signup.7digital.com
 
