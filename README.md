@@ -38,9 +38,11 @@ it simply add the following line to your Podfile:
 
 3. Add libxml2.dylib to your Link Binaries With Libraries Build Phase using the same process as in step 2
 
-4. Get your App Credentials at https://api-signup.7digital.com
+4. In your project's target Build Settings, add -ObjC to the [Other Linker Flags](images/readme_objc.png) 
 
-5. In your Application Delegate:
+5. Get your App Credentials at https://api-signup.7digital.com
+
+6. In your Application Delegate:
 	1. Import SevenDigital: 
 		
 			#import "SevenDigital.h"
@@ -50,7 +52,7 @@ it simply add the following line to your Podfile:
 		
 			[SevenDigital initializeWithConsumerKey:@"[Your Consumer Key]" andSecret:@"[Your Secret]"];
 		
-6. Many of the 7digital API methods require the user to be logged in. Create your own 7digital account at www.7digital.com
+7. Many of the 7digital API methods require the user to be logged in. Create your own 7digital account at www.7digital.com
 
 ## Making a generic request
 
