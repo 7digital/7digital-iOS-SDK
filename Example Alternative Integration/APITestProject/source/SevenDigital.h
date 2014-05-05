@@ -31,7 +31,7 @@
  @param key     Your 7digital Consumer Key
  @param secret  Your 7digital Consumer Secret
  
- .*/
+ */
 + (void)initializeWithConsumerKey:(NSString *)key andSecret:(NSString *)secret;
 
 
@@ -40,13 +40,24 @@
 //
 
 /**
- Creates and sends and API call to the 7digital API.
+ Creates and sends an API call to the 7digital API.
+ Example usage:
+ @code
+ SDAPIRequest *chartRequest = [[SDAPIRequest alloc] initWithPath:@"/release/chart" method:SDHTTPMethodGet params:@{@"country":@"GB"}];
+ 
+ [[SevenDigital sharedInstance] performRequest:chartRequest onSuccess:^(SDAPIResponse *apiResponse) {
+    NSDictionary *responseDictionary = apiResponse.responseItem;
+    NSLog(@"successful call %@", responseDictionary);
+ } onFailure:^(NSError *error) {
+    NSLog(@"failure %@", error);
+ }];
+ @endcode
  
  @param request         A request with a relative URL and parameters for the API call
  @param successBlock    A handler for the api response
  @param failureBlock    A handler for any api errors
- 
- .*/
+
+ */
 
 - (void)performRequest:(SDAPIRequest *)request
              onSuccess:(void(^)(SDAPIResponse* apiResponse))successBlock
@@ -62,7 +73,7 @@
  
  @returns an oauth-ready NSURL
  
- .*/
+ */
 
 - (NSURL *)authenticatedURLWithURL:(NSURL *)url params:(NSDictionary *)params;
 
@@ -78,7 +89,7 @@
  @param password        The user's 7digital account password
  @param successBlock    A handler for the success block, which also returns the logged in user's username
  
- .*/
+ */
 
 // Login and logout methods
 - (void)loginUsername:(NSString*)username
@@ -98,7 +109,7 @@
 /**
  Logs a user out of their 7digital account
  
- .*/
+ */
 
 - (void)logout;
 
