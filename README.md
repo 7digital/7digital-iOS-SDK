@@ -54,6 +54,11 @@ it simply add the following line to your Podfile:
 		
 7. Many of the 7digital API methods require the user to be logged in. Create your own 7digital account at www.7digital.com
 
+## Loging in a user
+1. Login user with webView
+
+		[[SevenDigital sharedInstance] presentLoginWebViewFromView:self];
+		
 ## Making a generic request
 
 The example applications show how you can use some of the wrapper classes to query the locker API. For any other calls to the 7digital API, you can follow the following pattern:
