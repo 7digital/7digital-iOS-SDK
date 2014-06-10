@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.author       = { "7digital" => "support@7digital.com" }
 
   s.platform     = :ios, '7.0'
-  s.source       = { :git => "https://github.com/7digital/7digital-iOS-SDK.git" , :tag => 'v1.0.2' }
+  s.source       = { :git => "https://github.com/7digital/7digital-iOS-SDK.git" , :tag => '1.0.2' }
   s.source_files  = 'Classes', 'Classes/**/*.{h,m}'
   s.exclude_files = 'Classes/Exclude'
   s.public_header_files = 'Classes/**/*.h'
