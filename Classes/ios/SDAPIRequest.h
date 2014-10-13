@@ -17,6 +17,7 @@
 @property (nonatomic, copy) NSString *method;
 @property (nonatomic, copy) NSString *path;
 @property (nonatomic, strong) NSDictionary *params;
+@property (nonatomic, copy) NSData * bodyData;
 @property (nonatomic, strong) NSURL *fixedURL;
 
 - (id)initWithPath:(NSString *)path;
@@ -39,6 +40,13 @@
  */
 
 - (id)initWithPath:(NSString *)path method:(NSString *)method params:(NSDictionary *)params;
+
+
+/**
+ extra nsdata for posting json for playlist api calls etc.
+ **/
+- (id)initWithPath:(NSString *)path method:(NSString *)method params:(NSDictionary *)params withJsonData:(NSData*)bodyData;
+
 - (id)initWithFixedURL:(NSURL *)fixedURL;
 
 @end

@@ -11,6 +11,9 @@
 #import "SDAPIResponse.h"
 #import "SDLocker.h"
 #import "SDMedia.h"
+#import "SDPlaylist.h"
+#import "SDDownloadUrl.h"
+
 #import <UIKit/UIKit.h>
 
 #define SDAuthenticationChangedNotification @"SDAuthenticationChangedNotification"
@@ -79,37 +82,26 @@
 
 
 //
-//\\Authentication with the 7digital API
+// Authentication with the 7digital API
 //
-// Login and logout methods
 
-
-
-//\\General Access Key Login Method
-/**
- Authenticates the user with the server by handling login by presenting a modal webview for the user to enter their details on the seven digital website.
- @param presentingFromView      The view presenting modaly the login page.
- 
- */
--(void)presentLoginWebViewFromView:(UIViewController*)presentingFromView;
-
-
-
-//\\Premium Login Requests
 /**
  Logs a user into their 7digital account
- 
- Requires Premium API Access! to inquire about gaining Premium API contact us at http://about.7digital.com/contact-us
  
  @param username        The user's 7digital account username or email address
  @param password        The user's 7digital account password
  @param successBlock    A handler for the success block, which also returns the logged in user's username
  
  */
+
+// Login and logout methods
 - (void)loginUsername:(NSString*)username
              password:(NSString*)password
             onSuccess:(void(^)(NSString *username))successBlock
               onError:(void(^)(NSError *error))failureBlock;
+
+
+-(void)presentLoginWebViewFromView:(UIViewController*)presentingFromView;
 
 
 - (void)loginWithUsername:(NSString*)username

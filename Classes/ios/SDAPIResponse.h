@@ -12,6 +12,7 @@
 
 @property (nonatomic, readonly) NSDictionary *responseItem;
 @property (nonatomic, readonly) NSError *error;
+@property (nonatomic, assign) NSString *path;
 
 - (id)initWithJSONDictionary:(NSDictionary *)dictionary;
 - (id)initWithDictionary:(NSDictionary *)dictionary;
