@@ -28,13 +28,15 @@
 
 @property (assign, nonatomic) NSInteger duration;
 
-@property (strong, nonatomic) NSString *isrc;
+@property (strong, nonatomic) NSString *isrc; //International Standard Recording Code
 
 @property (strong, nonatomic) NSString *SDURL;
 
 @property (strong, nonatomic) SDArtist *artist;
 
 @property (strong, nonatomic) NSArray *downloadUrls;
+
+@property (strong, nonatomic) NSString *purchaseDateString;
 
 - (id)initWithDictionary:(NSDictionary *)apiDictionary;
 
