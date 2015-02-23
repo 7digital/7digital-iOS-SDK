@@ -34,4 +34,13 @@ typedef NS_ENUM(NSInteger, kSDMediaType) {
  */
 + (NSURL *)urlForTrack:(SDTrack *)track mediaType:(kSDMediaType)mediaType;
 
+/**
+ Returns a URL for a 7digital track appropriate for a preview stream.  The NSURL will contain all of the appropriate oAuth parameters for the logged in user.
+ See the 7Digital media API at http://developer.7digital.com/resources/api-docs/media-delivery-api
+ 
+ @param track           The SDTrack object for the song
+ 
+ */
++ (NSURL *)previewURLForTrack:(SDTrack *)track;
+
 @end

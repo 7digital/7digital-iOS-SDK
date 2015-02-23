@@ -36,6 +36,9 @@
 
 @property (strong, nonatomic) NSArray *downloadUrls;
 
+//As some tracks have a limit on how many times a user can download a track.
+@property (assign, nonatomic) NSInteger downloadsRemainingCount;
+
 @property (strong, nonatomic) NSString *purchaseDateString;
 
 - (id)initWithDictionary:(NSDictionary *)apiDictionary;
