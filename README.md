@@ -54,7 +54,7 @@ it simply add the following line to your Podfile:
 		
 7. Many of the 7digital API methods require the user to be logged in. Create your own 7digital account at www.7digital.com
 
-## Loging in a user
+## Logging in a user
 1. Login user with webView
 
 		[[SevenDigital sharedInstance] presentLoginWebViewFromView:self];
@@ -78,6 +78,27 @@ The example applications show how you can use some of the wrapper classes to que
 		    NSLog(@"failure %@", error);
 		}];
 	
+## Requesting a preview track
+
+1. In order to request a preview track you will want code similar to the following
+
+		SDTrack *track = [self.sdRelease.tracks objectAtIndex:indexPath.row];
+		NSURL *preview = [SDMedia previewURLForTrack:track];
+		// play the track
+		[self playURL:preview];
+	
+		- (void)playURL:(NSURL *)url {
+			AVPlayer *player = [[AVPlayer alloc] initWithURL:url];
+			self.songPlayer = player;
+			[[NSNotificationCenter defaultCenter] addObserver:self
+		                                             selector:@selector(playerItemDidReachEnd:)
+		                                                 name:AVPlayerItemDidPlayToEndTimeNotification
+		                                               object:[self.songPlayer currentItem]];
+			[self.songPlayer addObserver:self forKeyPath:@"status" options:0 context:nil];
+		};
+
+
+
 To find out more about the available calls and required parameters, you can find the documentation at http://developer.7digital.com/resources/api-docs/introduction
 
 Documentation about these calls is available from the quick help included in XCode 5
