@@ -1,5 +1,9 @@
 # SevenDigital CHANGELOG
 
+## 1.1.4
+
+Moved SDK network calls off of the main run loop
+
 ## 1.1.3
 
 ### Removed logging
