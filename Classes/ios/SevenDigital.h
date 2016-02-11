@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "SDAPIRequest.h"
 #import "SDAPIResponse.h"
-#import "SDLocker.h"
-#import "SDMedia.h"
-#import "SDPlaylist.h"
 #import "SDDownloadUrl.h"
+#import "SDLockerHelper.h"
+#import "SDMedia.h"
+#import "SDPlaylistHelper.h"
+#import "SDUserAccountSetup.h"
 
 #import <UIKit/UIKit.h>
 
@@ -22,6 +23,8 @@
 
 @property (nonatomic, readonly) NSString *currentUser;
 @property (nonatomic, readonly) BOOL isCurrentUserAuthenticated;
+
+@property (nonatomic, retain) NSNumber * serverOffset;
 
 /**@brief reusable singleton for calling api methods*/
 + (SevenDigital *)sharedInstance;
@@ -74,18 +77,16 @@
  @param url             The path as an NSURL that we would like to request from
  @param params          A dictionary with any url parameters
  
- @returns an oauth-ready NSURL
+ @return an oauth-ready NSURL
  
  */
 
 - (NSURL *)authenticatedURLWithURL:(NSURL *)url params:(NSDictionary *)params;
 
-
 //
 //\\Authentication with the 7digital API
 //
 // Login and logout methods
-
 
 
 
@@ -96,7 +97,6 @@
  
  */
 -(void)presentLoginWebViewFromView:(UIViewController*)presentingFromView;
-
 
 
 
@@ -129,8 +129,13 @@
 
 - (void)logout;
 
+/** 
+    methods to force the calculating the server offset.
+    this should usually generate itself on requests but i like to call it on applicationDidFinishLaunching
+ */
+- (void)calculateServerOffsetWithCompletion:(void(^)())completion;
 
-
+- (void)calculateServerOffset;
 
 
 @end

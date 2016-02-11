@@ -12,7 +12,7 @@
 
 /**
  
- This is an object to represent a 7Digital Release (An album, single, EP etc)
+ This is an object to represent a 7digital Release (An album, single, EP etc)
  
  */
 
@@ -38,6 +38,8 @@
 
 @property (strong, nonatomic) NSArray *tracks;
 
+//unfortunately some albulms get taken down from 7digital by the rights holders this indicates if it has.
+@property (assign, nonatomic) BOOL available;
 
 /**
  

@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSDictionary *params;
 @property (nonatomic, copy) NSData * bodyData;
 @property (nonatomic, strong) NSURL *fixedURL;
+@property (nonatomic, strong) NSString *acceptHeader;
 
 - (id)initWithPath:(NSString *)path;
 - (id)initWithPath:(NSString *)path params:(NSDictionary *)params;

@@ -24,6 +24,9 @@
 
 @property (strong, nonatomic) NSString *SDURL;
 
+//This isnt returned by the locker call itself, but is in the search api. which is what we currently use to get artist images.
+@property (strong, nonatomic) NSString *imageURL;
+
 - (id)initWithDictionary:(NSDictionary *)apiDictionary;
 
 
