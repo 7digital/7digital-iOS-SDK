@@ -3,7 +3,7 @@
 //  SevenDigital
 //
 //  Created by Ryan Smale on 30/09/15.
-//  Copyright © 2015 7 Digital. All rights reserved.
+//  Copyright © 2015 7digital. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
