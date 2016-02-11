@@ -12,7 +12,7 @@
 
 /**
  
- This is an object to represent a 7Digital Track
+ This is an object to represent a 7digital Track
  
  */
 
@@ -26,6 +26,8 @@
 
 @property (assign, nonatomic) NSInteger trackNumber;
 
+@property (assign, nonatomic) NSInteger discNumber;
+
 @property (assign, nonatomic) NSInteger duration;
 
 @property (strong, nonatomic) NSString *isrc; //International Standard Recording Code
@@ -34,7 +36,11 @@
 
 @property (strong, nonatomic) SDArtist *artist;
 
+@property (strong, nonatomic) NSString *performingArtistString;
+
 @property (strong, nonatomic) NSArray *downloadUrls;
+
+@property (assign, nonatomic) BOOL availible;
 
 //As some tracks have a limit on how many times a user can download a track.
 @property (assign, nonatomic) NSInteger downloadsRemainingCount;

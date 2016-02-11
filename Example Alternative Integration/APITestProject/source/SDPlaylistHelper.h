@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SDPlaylistTrack.h"
 
-@interface SDPlaylist : NSObject
+@interface SDPlaylistHelper : NSObject
 
 
 /**
