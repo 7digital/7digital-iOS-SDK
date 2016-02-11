@@ -31,7 +31,7 @@
  @param page        an optional parameter to set a specific page of of playlists you want returned
  @param userID      a optional parameter to returns a specific users public playlists
  
- @return an array of SDPlaylistHeader's
+ @return an array of SDPlaylistMetadata's
  **/
 
 +(void)getPlaylists:(NSInteger*)pageSize page:(NSInteger*)page forOptionalSpecificUserID:(NSString*)userID returningPlaylistsArray:(void(^)(NSArray * playlistsArray, NSInteger* totalNumberOfPlaylists, NSError * error)) completion;

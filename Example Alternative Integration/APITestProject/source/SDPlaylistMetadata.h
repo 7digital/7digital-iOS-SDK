@@ -1,5 +1,5 @@
 //
-//  SDPlaylistHeader.h
+//  SDPlaylistMetadata.h
 //  SevenDigital
 //
 //  Created by Ryan Smale on 22/12/15.
