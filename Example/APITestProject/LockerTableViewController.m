@@ -59,7 +59,7 @@
 - (void)refreshLocker {
     
     if ([SevenDigital sharedInstance].isCurrentUserAuthenticated){
-        [SDLocker requestLockerForCurrentUserWithParams:@{@"page":@"1",
+        [SDLockerHelper requestLockerForCurrentUserWithParams:@{@"page":@"1",
                                                            @"pageSize":@"10"}
                                              completion:^(SDAPIResponse *response, NSArray *releasesArray, NSError *error) {
            

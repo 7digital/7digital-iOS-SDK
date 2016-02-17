@@ -39,7 +39,10 @@
     
     if (![SevenDigital sharedInstance].isCurrentUserAuthenticated){
 
+// 2-legged oauth option for authorized partners
 //        [self performSegueWithIdentifier:@"LoginSegue" sender:self];
+
+// 3-legged oauth option (default)
         [[SevenDigital sharedInstance] presentLoginWebViewFromView:self];
         
     } else {
@@ -60,7 +63,7 @@
 - (void)refreshLocker {
     
     if ([SevenDigital sharedInstance].isCurrentUserAuthenticated){
-        [SDLocker requestLockerForCurrentUserWithParams:@{@"page":@"1",
+        [SDLockerHelper requestLockerForCurrentUserWithParams:@{@"page":@"1",
                                                            @"pageSize":@"10"}
                                              completion:^(SDAPIResponse *response, NSArray *releasesArray, NSError *error) {
            

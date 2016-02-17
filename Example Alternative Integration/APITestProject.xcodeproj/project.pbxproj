@@ -25,6 +25,7 @@
 		DFB0BC7118F250940067E4E5 /* LockerTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0BC7018F250940067E4E5 /* LockerTableViewController.m */; };
 		DFB0BC7718F25ED50067E4E5 /* ReleaseTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = DFB0BC7618F25ED50067E4E5 /* ReleaseTableViewController.m */; };
 		DFB0BC7B18F267BC0067E4E5 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DFB0BC7A18F267BC0067E4E5 /* AVFoundation.framework */; };
+		DFE559361C74190B00840B4B /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DFE559351C74190B00840B4B /* Launch Screen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,7 +43,6 @@
 		685E113418F3C11F006AFDE6 /* SDAPIRequest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAPIRequest.h; sourceTree = "<group>"; };
 		685E113518F3C11F006AFDE6 /* SDAPIResponse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAPIResponse.h; sourceTree = "<group>"; };
 		685E113618F3C11F006AFDE6 /* SDArtist.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDArtist.h; sourceTree = "<group>"; };
-		685E113718F3C11F006AFDE6 /* SDLocker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDLocker.h; sourceTree = "<group>"; };
 		685E113818F3C11F006AFDE6 /* SDMedia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDMedia.h; sourceTree = "<group>"; };
 		685E113918F3C11F006AFDE6 /* SDRelease.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDRelease.h; sourceTree = "<group>"; };
 		685E113A18F3C11F006AFDE6 /* SDTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDTrack.h; sourceTree = "<group>"; };
@@ -70,6 +70,8 @@
 		DFB0BC7518F25ED50067E4E5 /* ReleaseTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReleaseTableViewController.h; sourceTree = "<group>"; };
 		DFB0BC7618F25ED50067E4E5 /* ReleaseTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReleaseTableViewController.m; sourceTree = "<group>"; };
 		DFB0BC7A18F267BC0067E4E5 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		DFE559351C74190B00840B4B /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		DFE559391C74219300840B4B /* SDLockerHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SDLockerHelper.h; sourceTree = "<group>"; };
 		DFE8061518ECCEDB003AAC28 /* SevenDigital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SevenDigital.h; sourceTree = "<group>"; };
 		DFE8061618ECCEDB003AAC28 /* libSevenDigital.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libSevenDigital.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,7 +110,7 @@
 				685E113418F3C11F006AFDE6 /* SDAPIRequest.h */,
 				685E113518F3C11F006AFDE6 /* SDAPIResponse.h */,
 				685E113618F3C11F006AFDE6 /* SDArtist.h */,
-				685E113718F3C11F006AFDE6 /* SDLocker.h */,
+				DFE559391C74219300840B4B /* SDLockerHelper.h */,
 				685E113818F3C11F006AFDE6 /* SDMedia.h */,
 				685E113918F3C11F006AFDE6 /* SDRelease.h */,
 				685E113A18F3C11F006AFDE6 /* SDTrack.h */,
@@ -156,6 +158,7 @@
 				685E113218F3C11F006AFDE6 /* source */,
 				689B282F18EA176E0004107E /* AppDelegate.h */,
 				689B283018EA176E0004107E /* AppDelegate.m */,
+				DFE559351C74190B00840B4B /* Launch Screen.storyboard */,
 				689B283218EA176E0004107E /* Main.storyboard */,
 				DFB0BC6F18F250940067E4E5 /* LockerTableViewController.h */,
 				DFB0BC7018F250940067E4E5 /* LockerTableViewController.m */,
@@ -266,7 +269,7 @@
 		689B281518EA176E0004107E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 0720;
 				ORGANIZATIONNAME = "7 Digital";
 				TargetAttributes = {
 					689B283D18EA176F0004107E = {
@@ -300,6 +303,7 @@
 			files = (
 				689B283918EA176E0004107E /* Images.xcassets in Resources */,
 				689B282B18EA176E0004107E /* InfoPlist.strings in Resources */,
+				DFE559361C74190B00840B4B /* Launch Screen.storyboard in Resources */,
 				689B283418EA176E0004107E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -390,6 +394,7 @@
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -461,6 +466,7 @@
 					"$(PROJECT_DIR)/APITestProject/source",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.7digital.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -485,6 +491,7 @@
 					"$(PROJECT_DIR)/APITestProject/source",
 				);
 				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.7digital.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -506,6 +513,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = "APITestProjectTests/APITestProjectTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.7digital.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
@@ -524,6 +532,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "APITestProject/APITestProject-Prefix.pch";
 				INFOPLIST_FILE = "APITestProjectTests/APITestProjectTests-Info.plist";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.7digital.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;

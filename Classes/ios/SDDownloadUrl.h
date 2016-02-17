@@ -11,9 +11,9 @@
 @interface SDDownloadUrl : NSObject
 
 /*
- 
- This object represents a server recommended download format
- 
+
+   This object represents a server recommended download format
+
  */
 
 @property (strong, nonatomic) NSString *downloadUrlString;

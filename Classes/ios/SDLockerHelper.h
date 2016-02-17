@@ -12,16 +12,16 @@
 #import "SDArtist.h"
 
 /**
- 
- This is a request to return releases from a user's locker (library of all purchased tracks).
- 
+
+   This is a request to return releases from a user's locker (library of all purchased tracks).
+
  */
 
 @class SDAPIResponse;
 
 @interface SDLockerHelper : NSObject
 
-+ (void)requestLockerForCurrentUserWithParams:(NSDictionary *)params completion:(void(^)(SDAPIResponse *response, NSArray *releasesArray, NSError *error))completion;
++ (void)requestLockerForCurrentUserWithParams:(NSDictionary *)params completion:(void (^)(SDAPIResponse *response, NSArray *releasesArray, NSError *error))completion;
 
 
 @end

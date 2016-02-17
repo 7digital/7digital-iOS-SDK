@@ -18,7 +18,6 @@
 #error You need to insert your Consumer Key and Your Secret, You can get one at https://api-signup.7digital.com
     
     [SevenDigital initializeWithConsumerKey:@"<#Your Key#>" andSecret:@"<#Your Secret#>"];
-
     
     return YES;
 }

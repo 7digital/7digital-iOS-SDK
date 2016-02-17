@@ -11,9 +11,9 @@
 @interface SDArtist : NSObject
 
 /**
- 
- This is an object to represent an Artist.
- 
+
+   This is an object to represent an Artist.
+
  */
 
 @property (assign, nonatomic) NSInteger artistId;
