@@ -101,7 +101,7 @@ The example applications show how you can use some of the wrapper classes to que
 
 To find out more about the available calls and required parameters, you can find the documentation at http://developer.7digital.com/resources/api-docs/introduction
 
-Documentation about these calls is available from the quick help included in XCode 5
+Documentation about these calls is available from the quick help included in Xcode 5
 
 ## About the 7digital API
 The 7digital API gives developers access to 7digital services and licensed catalogue of over 25m tracks allowing creation of new music applications ranging from simple music discovery websites to fully integrated download stores or full-length streaming services.
